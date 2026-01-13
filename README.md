@@ -70,87 +70,76 @@ API Gateway: Routing & security layer
   DevOps	Docker, Docker Compose
   Build	Maven
 📡 API Endpoints (Sample)
-  Auth
-  POST /auth/register
-  POST /auth/login
-  POST /auth/refresh
-  POST /auth/logout
-  
-  OAuth
-  GET /oauth2/authorize/google
-  GET /oauth2/authorize/github
-  
-  Users
-  GET /users/{id}
-  PUT /users/{id}
-  DELETE /users/{id}
-  
-  Admin
-  POST /admin/create-role
-  POST /admin/assign-role
+    -Auth
+    POST /auth/register
+    POST /auth/login
+    POST /auth/refresh
+    POST /auth/logout
+    
+    -OAuth
+    GET /oauth2/authorize/google
+    GET /oauth2/authorize/github
+    
+    -Users
+    GET /users/{id}
+    PUT /users/{id}
+    DELETE /users/{id}
+    
+    -Admin
+    POST /admin/create-role
+    POST /admin/assign-role
 
 🔐 JWT Flow
 
-User logs in
-
-Server issues:
-
-Access Token
-
-Refresh Token
-
-Access token used for API calls
-
-Refresh token generates new access token
-
-Tokens can be revoked
+    User logs in
+    
+    Server issues:
+    
+    Access Token
+    
+    Refresh Token
+    
+    Access token used for API calls
+    
+    Refresh token generates new access token
+    
+    Tokens can be revoked
 
 🗄 Database Schema (Simplified)
-Users
-id, email, password, tenant_id, status
-
-Roles
-id, name
-
-Permissions
-id, name
-
-Audit Logs
-id, user_id, action, timestamp, ip
+  -Users
+  id, email, password, tenant_id, status
+  -Roles
+  id, name
+  -Permissions
+  id, name
+  -Audit Logs
+  id, user_id, action, timestamp, ip
 
 🛠 How to Run Locally
-1. Clone the Repo
-git clone https://github.com/your-username/java-iam-security-service.git
-cd java-iam-security-service
 
-2. Start Services
-docker-compose up -d
-
-3. Run Spring Boot Apps
-mvn spring-boot:run
-
-4. Open Swagger
-http://localhost:8080/swagger-ui.html
+  1. Clone the Repo
+  git clone https://github.com/your-username/java-iam-security-service.git
+  cd java-iam-security-service
+  2. Start Services
+  docker-compose up -d
+  3. Run Spring Boot Apps
+  mvn spring-boot:run
+  4. Open Swagger
+  http://localhost:8080/swagger-ui.html
 
 🧪 Testing
 
-Unit tests for auth & security
-
-API testing with Postman
-
-OAuth login flow testing
+    -Unit tests for auth & security
+    -API testing with Postman
+    -OAuth login flow testing
 
 📈 Future Enhancements
 
-2FA (TOTP)
-
-Passwordless login
-
-Device-based security
-
-AI-based anomaly detection
-
-Kubernetes deployment
+  -2FA (TOTP)
+  -Passwordless login
+  -Device-based security
+  -AI-based anomaly detection
+  -Kubernetes deployment
 
 👨‍💻 Author
 
